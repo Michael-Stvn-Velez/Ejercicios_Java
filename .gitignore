@@ -1,0 +1,42 @@
+### Archivos Compilados ###
+bin/          # Carpeta de clases compiladas
+*.class       # Archivos .class individuales
+*.jar         # Archivos JAR generados
+*.war         # Archivos WAR (si es web)
+
+### IDEs ###
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.settings/
+.project
+.classpath
+.factorypath
+
+# VSCode
+.vscode/
+
+### Sistemas Operativos ###
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+### Logs y Temporales ###
+*.log
+*.tmp
+*.bak
+
+### Otros ###
+# Archivos de configuración local
+config.properties
+.env
+
+# Archivos de pruebas (si no se usan)
+/test-output/
