@@ -52,7 +52,7 @@ README.md
 
 2. **Compilar y probar** tu implementación:
    ```bash
-   javac -d bin src/puntoX/Main.java
+   javac -d bin src/punto{n}/*.java
    java -cp bin puntoX.Main
    ```
 

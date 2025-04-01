@@ -27,7 +27,7 @@ public class Main {
         int[] array = new int[size];
 
          // llenamos el array con números aleatorios entre 1 y 300
-         for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             array[i] = (int) (Math.random() * 300) + 1;
         }
 
