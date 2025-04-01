@@ -24,7 +24,7 @@ README.md
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
+   git clone https://github.com/Michael-Stvn-Velez/Ejercicios_Java.git
    cd tu-proyecto
    ```
 
