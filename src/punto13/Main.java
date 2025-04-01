@@ -41,20 +41,21 @@ class CopiadorArrays {
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el tamaño para los arrays: ");
-        int tamaño = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese el tamaño para los arrays: ");
+            int tamaño = scanner.nextInt();
 
-        // Crear objeto copiador
-        CopiadorArrays copiador = new CopiadorArrays(tamaño);
+            // Crear objeto copiador
+            CopiadorArrays copiador = new CopiadorArrays(tamaño);
 
-        // Llenar el array original
-        copiador.llenarArrayOriginal();
+            // Llenar el array original
+            copiador.llenarArrayOriginal();
 
-        // Copiar el array
-        copiador.copiarArray();
+            // Copiar el array
+            copiador.copiarArray();
 
-        // Mostrar ambos arrays
-        copiador.mostrarArrays();
+            // Mostrar ambos arrays
+            copiador.mostrarArrays();
+        }
     }
 }
