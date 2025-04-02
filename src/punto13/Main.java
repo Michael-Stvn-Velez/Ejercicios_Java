@@ -10,11 +10,11 @@ class CopiadorArrays {
     // Objeto para leer entrada del usuario
     private Scanner scanner;
 
-    // Constructor que recibe el tamaño del array
-    public CopiadorArrays(int tamaño) {
+    // Constructor que recibe el tamaño del array y un Scanner
+    public CopiadorArrays(int tamaño, Scanner scanner) {
         this.arrayOriginal = new int[tamaño];
         this.arrayCopia = new int[tamaño];
-        this.scanner = new Scanner(System.in);
+        this.scanner = scanner;
     }
 
     // Método para llenar el array original con números
@@ -46,7 +46,7 @@ public class Main {
             int tamaño = scanner.nextInt();
 
             // Crear objeto copiador
-            CopiadorArrays copiador = new CopiadorArrays(tamaño);
+            CopiadorArrays copiador = new CopiadorArrays(tamaño, scanner);
 
             // Llenar el array original
             copiador.llenarArrayOriginal();

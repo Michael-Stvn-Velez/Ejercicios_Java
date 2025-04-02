@@ -54,9 +54,9 @@ public class Main {
             String pista = scanner.nextLine();
             
             // Limpiar la consola
-            for (int i = 0; i < 50; i++) {
-                System.out.println();
-            }
+            // Clear the console using ANSI escape codes
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             
             // Inicializar variables para la ronda
             char[] palabraOculta = new char[palabra.length()];
