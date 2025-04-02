@@ -10,11 +10,11 @@ class CopiadorArrays {
     // Objeto para leer entrada del usuario
     private Scanner scanner;
 
-    // Constructor que recibe el tamaño del array
-    public CopiadorArrays(int tamaño) {
+    // Constructor que recibe el tamaño del array y un Scanner
+    public CopiadorArrays(int tamaño, Scanner scanner) {
         this.arrayOriginal = new int[tamaño];
         this.arrayCopia = new int[tamaño];
-        this.scanner = new Scanner(System.in);
+        this.scanner = scanner;
     }
 
     // Método para llenar el array original con números
@@ -41,20 +41,21 @@ class CopiadorArrays {
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el tamaño para los arrays: ");
-        int tamaño = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese el tamaño para los arrays: ");
+            int tamaño = scanner.nextInt();
 
-        // Crear objeto copiador
-        CopiadorArrays copiador = new CopiadorArrays(tamaño);
+            // Crear objeto copiador
+            CopiadorArrays copiador = new CopiadorArrays(tamaño, scanner);
 
-        // Llenar el array original
-        copiador.llenarArrayOriginal();
+            // Llenar el array original
+            copiador.llenarArrayOriginal();
 
-        // Copiar el array
-        copiador.copiarArray();
+            // Copiar el array
+            copiador.copiarArray();
 
-        // Mostrar ambos arrays
-        copiador.mostrarArrays();
+            // Mostrar ambos arrays
+            copiador.mostrarArrays();
+        }
     }
 }
